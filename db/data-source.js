@@ -9,7 +9,7 @@ exports.dataSourceOptions = {
     username: "reg_jumbo_user_stg",
     password: "UbuNL6de7nBBEUqvm5pcjhA",
     database: "reg_aurora_cluster_jumbo",
-    entities: ["src/**/*.entity{.ts,.js}"],
+    entities: ["apps/test-typeorm-migrations-v2/src/**/*.entity{.ts,.js}"],
     migrations: ["src/**/*.entity{.ts,.js}"],
     synchronize: true,
     schema: 'tracking_event_cl'

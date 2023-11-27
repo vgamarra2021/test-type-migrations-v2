@@ -1,5 +1,31 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/test-typeorm-migrations-v2/src",
+  "monorepo": true,
+  "root": "apps/test-typeorm-migrations-v2",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/test-typeorm-migrations-v2/tsconfig.app.json"
+  },
+  "projects": {
+    "test-typeorm-migrations-v2": {
+      "type": "application",
+      "root": "apps/test-typeorm-migrations-v2",
+      "entryFile": "main",
+      "sourceRoot": "apps/test-typeorm-migrations-v2/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/test-typeorm-migrations-v2/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    }
+  }
 }
